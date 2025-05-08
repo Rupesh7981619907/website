@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy Agent Registration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-image:url(image3.jpeg); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            background-color: #222;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .linkedin-link {
+            color: #0077b5;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            background-color:brown;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="email"],
+        .form-group input[type="number"],
+        .form-group input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+
+        .required {
+            color: red;
+            font-size: 0.7em;
+            margin-top: 3px;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 0.9em;
+            color:yellow;
+            font-weight: normal;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .progress-bar {
+            text-align: right;
+            font-size: 0.7em;
+            color: red;
+            margin-top: 15px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+
+        #successMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">SPY AGENT</div>
+        </div>
+        <h1>Spy Agent</h1>
+        <a href="https://www.linkedin.com/company/spy-agent/" class="linkedin-link">https://www.linkedin.com/company/spy-agent/</a>
+        <hr>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="candidateName">1. Candidate Name</label>
+                <input type="text" id="candidateName" name="candidateName" required>
+                <div class="required">Required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNumber">2. Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+                <div class="required">Required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="emailId">3. Email ID</label>
+                <input type="email" id="emailId" name="emailId" required>
+                <div class="required">Required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="collegeName">4. College Name</label>
+                <input type="text" id="collegeName" name="collegeName">
+            </div>
+
+            <div class="form-group">
+                <label for="department">5. Department</label>
+                <input type="text" id="department" name="department">
+            </div>
+
+            <div class="form-group">
+                <label for="yearPassedOut">6. Year Of Passed Out</label>
+                <input type="value" id="yearPassedOut" name="yearPassedOut">
+            </div>
+
+            <div class="form-group">
+                <label for="percentage">7. Percentage</label>
+                <input type="text" id="percentage" name="percentage">
+            </div>
+
+            <div class="form-group">
+                <label>8. Domains</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="domains" value="Web Development">Web Development</label>
+                    <label><input type="checkbox" name="domains" value="App Development">App Development</label>
+                    <label><input type="checkbox" name="domains" value="Data Science">Data Science</label>
+                    <label><input type="checkbox" name="domains" value="Machine Learning">Machine Learning</label>
+                    <label><input type="checkbox" name="domains" value="Artificial Intelligence">Artificial Intelligence</label>
+                    <label><input type="checkbox" name="domains" value="Cloud Computing">Cloud Computing</label>
+                    <label><input type="checkbox" name="domains" value="Cyber Security">Cyber Security</label>
+                    <label><input type="checkbox" name="domains" value="UI/UX Design">UI/UX Design</label>
+                    <label><input type="checkbox" name="domains" value="Testing">Testing</label>
+                    <label><input type="checkbox" name="domains" value="DevOps">DevOps</label>
+                    <label><input type="checkbox" name="domains" value="Blockchain">Blockchain</label>
+                    <label><input type="checkbox" name="domains" value="Other">Other</label>
+                    <input type="text" name="otherDomain" placeholder="Specify Other Domain">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">9. Resume</label>
+                <input type="file" id="resume" name="resume">
+            </div>
+
+            <div class="form-group">
+                <label for="linkedinProfile">10. LinkedIn Profile</label>
+                <input type="text" id="linkedinProfile" name="linkedinProfile">
+            </div>
+
+            <div class="form-group">
+                <label for="githubProfile">11. Github Profile</label>
+                <input type="text" id="githubProfile" name="githubProfile">
+            </div>
+
+            <div class="form-group">
+                <label for="referredBy">12. Referred By</label>
+                <input type="text" id="referredBy" name="referredBy">
+            </div>
+
+            <button type="submit">REGISTER HERE!</button>
+        </form>
+
+        <div id="successMessage">✅ Registration Successful!</div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            document.getElementById("successMessage").style.display = "block";
+            this.reset(); 
+        });
+    </script>
+</body>
+</html>
